@@ -2715,13 +2715,13 @@ fieldset[disabled] a.btn {
 
 .btn-success:hover {
   color: #fff;
-  background-color: #149a80;
-  border-color: #128f76;
+  background-color: #8c8444;
+  border-color:#79723c;
 }
 
 .btn-success:focus, .btn-success.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(24, 188, 156, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(24, 188, 156, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(197, 186, 96, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(197, 186, 96, 0.5);
 }
 
 .btn-success.disabled, .btn-success:disabled {
@@ -2732,10 +2732,10 @@ fieldset[disabled] a.btn {
 .btn-success:not([disabled]):not(.disabled):active, .btn-success:not([disabled]):not(.disabled).active,
 .show > .btn-success.dropdown-toggle {
   color: #fff;
-  background-color: #128f76;
-  border-color: #11836d;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(24, 188, 156, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(24, 188, 156, 0.5);
+  background-color: #c5ba60;
+  border-color: #a89f54;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(197, 186, 96, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(197, 186, 96, 0.5);
 }
 
 .btn-info {
