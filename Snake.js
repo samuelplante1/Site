@@ -26,7 +26,7 @@ function Snake() {
 				}
 
 				this.show = function(){
-									fill(230);
+									fill(220);
 							for (var i = 0; i < this.tail.length; i++){
 								rect(this.tail[i].x, this.tail[i].y, scl, scl);
 							}
