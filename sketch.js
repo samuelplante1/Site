@@ -1,8 +1,8 @@
 var s;
 var scl = 20;
 var food;
-var boxes = 15;
-var fps = 10;
+var boxes = 25;
+var fps = 12;
 
 function setup() {
 				 createCanvas (scl * boxes, scl * boxes);
