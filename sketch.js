@@ -14,7 +14,7 @@ function setup() {
 
 function draw(){
 				background(61);
-				fill(100, 255, 100);
+				fill(255, 255, 150);
 				rect(food.x, food.y, scl, scl)
 				if (s.eat(food)){
 					pickLocation();
