@@ -6,6 +6,8 @@ function Snake() {
 			this.xspeed = 1;
 			this.yspeed = 0;
 			this.tail = [];
+			this.score = 0;
+
 
 			this.dir = function(x, y) {
 						this.xspeed = x;
@@ -24,7 +26,7 @@ function Snake() {
 				}
 
 				this.show = function(){
-									fill(255);
+									fill(230);
 							for (var i = 0; i < this.tail.length; i++){
 								rect(this.tail[i].x, this.tail[i].y, scl, scl);
 							}
@@ -37,6 +39,8 @@ function Snake() {
 										 var d = dist(this.x, this.y, pos.x, pos.y);
 										 if (d < 1){
 											this.tail[this.tail.length] = this.tail[this.tail.length-1];
+											this.score += 5 * this.tail.length;
+											var points = document.getElementById("points").innerHTML = "Score: " + this.score;
 									return true;
 									} else {
 										return false;
@@ -46,11 +50,15 @@ function Snake() {
 
 
 			this.validlocation = function(px, py){
+						//if (px === this.x && py === this.y){
+						//	return false;
+						//} else {
 							for (var i = 0; i < this.tail.length; i++){
 								if (px === this.tail[i].x && py === this.tail[i].y){
 									return false;
+							//	  }
 								}
-								}
+							}
 									return true;
 			}
 }

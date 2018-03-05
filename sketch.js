@@ -1,30 +1,49 @@
 var s;
 var scl = 20;
-var food;
-var boxes = 5000;
-var fps = 30;
+var food0;
+//var food1;
+//var food2;
+//var food3;
+var boxes = 25;
+var fps = 12;
+
 
 function setup() {
 				 createCanvas (scl * boxes, scl * boxes);
 				s = new Snake();
-				pickLocation();
+				food0 = pickLocation();
+				//food1 = pickLocation();
+				//food2 = pickLocation();
+				//food3 = pickLocation();
 				frameRate(fps);
+				var points = document.getElementById("points").innerHTML = "Score: " + s.score;
 }
 
 
 function draw(){
 				background(61);
 				fill(255, 255, 150);
-				rect(food.x, food.y, scl, scl)
-				if (s.eat(food)){
-					pickLocation();
+	rect(food0.x, food0.y, scl, scl)
+	//rect(food1.x, food1.y, scl, scl)
+	//rect(food2.x, food2.y, scl, scl)
+	//rect(food3.x, food3.y, scl, scl)
+				if (s.eat(food0)){
+					food0 = pickLocation();
 				}
+				//if (s.eat(food1)){
+				//	food1 = pickLocation();
+				//}
+				//if (s.eat(food2)){
+				//	food2 = pickLocation();
+				//}
+				//if (s.eat(food3)){
+				//	food3 = pickLocation();
+				//}
 				if (!(s.validlocation(s.x, s.y))){
 				//location = location;
 				}
 				s.update();
 				s.show();
-
 }
 
 
@@ -49,13 +68,13 @@ function keyPressed() {
 }
 
 function pickLocation() {
-				var col = floor(width / scl);
-				var row = floor(height / scl);
-				var foodtemp = createVector( floor(random(row)), floor( random(col)));
-				foodtemp.mult(scl)
-				if (!(s.validlocation(foodtemp.x, foodtemp.y))){
+				var location = createVector(scl * floor(random(boxes)), scl * floor(random(boxes)));
+				if (location.x == s.x &&  location.y === s.y){
+					pickLocation();
+				}
+				if (!(s.validlocation(location.x, location.y))){
 					pickLocation();
 				} else{
-				food = foodtemp
+				return location;
 				}
 }
