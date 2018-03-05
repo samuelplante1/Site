@@ -1,7 +1,7 @@
 var s;
 var f;
 var scl = 25;
-var boxes = 16;
+var boxes = 22;
 var fps = 12;
 
 function setup() {

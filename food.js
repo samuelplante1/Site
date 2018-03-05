@@ -1,4 +1,4 @@
-var foodnumber = 4;
+var foodnumber = 5;
 
 function Food() {
     this.cell = [];
