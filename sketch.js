@@ -20,7 +20,7 @@ function draw(){
 					pickLocation();
 				}
 				if (!(s.validlocation(s.x, s.y))){
-				location = location;
+				//location = location;
 				}
 				s.update();
 				s.show();
