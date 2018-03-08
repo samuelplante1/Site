@@ -1,4 +1,4 @@
-var foodnumber = 5;
+var foodnumber = 4;
 
 function Food() {
     this.cell = [];
@@ -21,10 +21,19 @@ function Food() {
     }
 
 		this.pickcolor = function() {
-			 if (random(10) < 1){
-				 return 1;
-			 } else {
-				 return 0;
+			var chance = random(100)
+			if (chance < 2){
+				return 3;
+				} else if (chance < 7) {
+				return 2;
+			} else if (chance < 12) {
+				return 4;
+			//} else if (chance < 17) {
+			//return 5;
+		} else if (chance < 27) {
+		return 1;
+				} else {
+				return 0;
 			 }
 
 		}
@@ -38,11 +47,4 @@ function Food() {
 					return true;
 
 		}
-}
-
-function cell(plocation, pcolor) {
-	 this.lolcation = plocation;
-	 this.c = pcolor;
-
-
 }

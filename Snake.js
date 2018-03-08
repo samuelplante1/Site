@@ -30,9 +30,9 @@ function Snake() {
 				this.show = function(){
 									fill(220);
 							for (var i = 0; i < this.tail.length; i++){
-								rect(this.tail[i].x, this.tail[i].y, scl, scl);
+								rect(this.tail[i].x, this.tail[i].y, scl, scl, 5);
 							}
-							rect(this.x, this.y, scl, scl);
+							rect(this.x, this.y, scl, scl, 5);
 				}
 
 
@@ -40,15 +40,21 @@ function Snake() {
 			 this.eat = function(pos, pcolor) {
 										 var d = dist(this.x, this.y, pos.x, pos.y);
 										 if (d < 1){
-											this.tail[this.tail.length] = this.tail[this.tail.length-1];
-											this.score += 5 * this.tail.length * (pcolor + 1);
-											var points = document.getElementById("points").innerHTML = "&nbsp;&nbsp;&nbsp;Score: " + this.score;
+											this.expand(pcolor);
+											if (pcolor == 4){
+												this.expand(pcolor);
+											}
 									return true;
 									} else {
 										return false;
 									}
 			}
 
+			this.expand = function(pcolor) {
+				this.tail[this.tail.length] = this.tail[this.tail.length-1];
+				this.score += 5 * this.tail.length * (pcolor + 1);
+				var points = document.getElementById("points").innerHTML = "&nbsp;&nbsp;&nbsp;Score: " + this.score;
+			}
 
 
 			this.validlocation = function(px, py){
@@ -58,5 +64,17 @@ function Snake() {
 								}
 							}
 									return true;
+			}
+
+
+			this.cuthalf = function() {
+						if (this.tail.length > 2){
+						this.tail.splice(this.tail.length / 2, boxes * boxes);
+						}
+			}
+
+			this.cutall = function() {
+				var temptail = [];
+				this.tail = temptail;
 			}
 }
