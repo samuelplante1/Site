@@ -22,7 +22,7 @@ function draw(){
 					highscore = s.score;
 					document.getElementById("highscore").innerHTML = "highscore: " + s.score;
 				}
-				s = new Snake();
+				//s = new Snake();
 				}
 				background(51);
 				for (var i = 0; i < f.cell.length; i++){
