@@ -30,9 +30,9 @@ function Snake() {
 				this.show = function(){
 									fill(220);
 							for (var i = 0; i < this.tail.length; i++){
-								rect(this.tail[i].x, this.tail[i].y, scl, scl, 5);
+								rect(this.tail[i].x, this.tail[i].y, scl, scl, 4);
 							}
-							rect(this.x, this.y, scl, scl, 5);
+							rect(this.x, this.y, scl, scl, 4);
 				}
 
 

@@ -1,5 +1,6 @@
 var s;
 var f;
+var foodnumber = 4;
 var scl = 27;
 var boxes = 20;
 var fps = 10;
@@ -36,19 +37,26 @@ function draw(){
 							fill (150, 255, 150);
 							} else if (f.color[i] === 3){
 							fill (255, 100, 100);
+						  } else if (f.color[i] === 10){
+							fill (150, 255, 255);
 							}
 
 							if (s.eat(f.cell[i], f.color[i])){
 									f.color[i] = f.pickcolor();
 									f.cell[i] = f.pickLocation();
-									rect(f.cell[i].x, f.cell[i].y, scl, scl, 5);
+									rect(f.cell[i].x, f.cell[i].y, scl, scl, 4);
 							} else {
-								rect(f.cell[i].x, f.cell[i].y, scl, scl, 5);
+								rect(f.cell[i].x, f.cell[i].y, scl, scl, 4);
 							}
 			  }
+				fill(51, 51, 51);
 				s.update();
 				s.show();
 }
+function mousePressed() {
+	s.expand(1);
+}
+
 function keyPressed() {
 					if (keyCode === UP_ARROW || keyCode === 87){
 						if (!(s.yspeed === 1)){
