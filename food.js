@@ -38,7 +38,7 @@ function Food() {
 
 		this.notFood = function(px, py) {
 			for (var i = 0; i <this.cell.length; i++){
-				if (px === this.cell[0].x && py === this.cell[0].y){
+				if (px === this.cell[i].x && py === this.cell[i].y){
 					return false;
 				}
 			  }
