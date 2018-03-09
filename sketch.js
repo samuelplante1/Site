@@ -56,7 +56,7 @@ function draw(){
 				s.show();
 }
 function mousePressed() {
-	s.expand(1);
+	//s.expand(1);
 }
 
 function keyPressed() {
