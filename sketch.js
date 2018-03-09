@@ -3,7 +3,7 @@ var f;
 var foodnumber = 4;
 var scl = 27;
 var boxes = 20;
-var fps = 10;
+var fps = 11;
 var highscore = 0;
 
 function setup() {
@@ -14,6 +14,7 @@ function setup() {
 				frameRate(fps);
 				document.getElementById("points").innerHTML = "Score: " + s.score;
 				document.getElementById("highscore").innerHTML = "highscore: " + s.score;
+				document.getElementById("length").innerHTML = s.tail.length
 }
 
 
@@ -25,6 +26,7 @@ function draw(){
 				}
 				//s = new Snake();
 				}
+				document.getElementById("length").innerHTML = s.tail.length;
 				background(51);
 				for (var i = 0; i < f.cell.length; i++){
 							if (f.color[i] === 1){
