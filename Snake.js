@@ -24,7 +24,7 @@ function Snake() {
 							this.x = constrain(this.x, 0, width - scl);
 							this.y = constrain(this.y, 0, height - scl);
 							this.score++;
-							var points = document.getElementById("points").innerHTML = "&nbsp;&nbsp;&nbsp;Score: " + this.score;
+							var points = document.getElementById("points").innerHTML = "Score: " + this.score;
 				}
 
 				this.show = function(){
@@ -41,6 +41,12 @@ function Snake() {
 										 var d = dist(this.x, this.y, pos.x, pos.y);
 										 if (d < 1){
 											this.expand(pcolor);
+											if (pcolor == 2){
+												this.cuthalf();
+											}
+											if (pcolor == 3){
+												this.cutall();
+											}
 											if (pcolor == 4){
 												this.expand(pcolor);
 											}
@@ -53,7 +59,7 @@ function Snake() {
 			this.expand = function(pcolor) {
 				this.tail[this.tail.length] = this.tail[this.tail.length-1];
 				this.score += 5 * this.tail.length * (pcolor + 1);
-				var points = document.getElementById("points").innerHTML = "&nbsp;&nbsp;&nbsp;Score: " + this.score;
+				var points = document.getElementById("points").innerHTML = "Score: " + this.score;
 			}
 
 
