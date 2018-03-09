@@ -24,7 +24,7 @@ function draw(){
 					highscore = s.score;
 					document.getElementById("highscore").innerHTML = "highscore: " + s.score;
 				}
-				//s = new Snake();
+				s = new Snake();
 				}
 				document.getElementById("length").innerHTML = s.tail.length;
 				background(51);
