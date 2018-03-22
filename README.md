@@ -1,1 +1,1 @@
-https://commsite.github.io/site/
+https://samuelplante1.github.io/Site/
