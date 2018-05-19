@@ -8,7 +8,6 @@ $(document).ready(function(){
 
 function smallnav() {
   $(topnav).toggleClass('smallnav');
-  $(hid).toggleClass('hidden');
 }
 $(document).ready(function() 
  {
