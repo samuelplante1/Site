@@ -228,7 +228,7 @@ img {
 
 @media only screen and (max-width: 1165px) {
   p {
-    padding: 0 1em;
+    padding: 0 1em !important;
   }
   .col.c3 {
     width: 100%;
