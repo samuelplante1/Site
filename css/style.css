@@ -12,20 +12,23 @@ body {
   background-color: #e1e1e1;
 }
 
-svg {
+img#logo {
   position: fixed;
   left: 10px;
-  margin-top: 20px;
-  transform-origin: top left;
-  transform: scale(5);
-  width: 22px;
-  height: 12px;
+  margin-top: 15px;
+  width: 120px;
+  height: 55px;
   z-index: 102;
 }
 
 h1, a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+button img, button {
+  width: 55px;
+  height: 55px;
+  background-color: transparent;
 }
 
 #navigation {
@@ -56,6 +59,7 @@ h1, a {
   color: #8896b1;
   background-color: #e6e6e6;
 }
+
 
 .container {
   position: fixed;
@@ -148,12 +152,6 @@ img {
   margin: 1rem;
   transition: all 0.05s ease-in-out;
 }
-.content .btns a.btn img {
-  padding-top: 0.1rem;
-  width: 0.7rem;
-  height: 0.9rem;
-  filter: invert(100%);
-}
 .content .btns a.btn:hover {
   transform: scale(1.03);
   background-color: #8896b1;
@@ -222,7 +220,7 @@ img {
   text-align: center;
 }
 .footer p {
-  padding-top: 2.1em;
+  padding-top: 30px !important;
   color: #eee;
 }
 
@@ -267,14 +265,24 @@ img {
   #topnav button {
     display: block;
     position: fixed;
-    right: 10px;
-    top: 10px;
+    right: 30px;
+    top: 15px;
+    transition: all .5s cubic-bezier(0.45,-0.79, 0.57, 1.9);
   }
-
+  #topnav.smallnav button
+  {
+    transform: rotate(180deg);
+  }
+  li a {
+    padding: 60px 38vw 12px 38vw !important;
+    font-size: 3em;
+  }
   #navigation {
     height: 83px;
   }
-
+  .btn {
+    font-size: 1.3em !important;
+  }
   .imgcontain:not(#center) {
     display: none;
   }
