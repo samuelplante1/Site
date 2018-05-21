@@ -243,7 +243,7 @@ img {
   }
 
   #topnav {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s cubic-bezier(0.42,0,0.58,1);
   }
   #topnav.smallnav {
     padding-top: 30vh;
