@@ -25,10 +25,13 @@ h1, a {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
 button img, button {
   width: 55px;
   height: 55px;
   background-color: transparent;
+  filter: invert(20%);
+  opacity: 1 !important;
 }
 
 #navigation {
@@ -41,7 +44,7 @@ button img, button {
 #navigation ul#topnav li {
   color: #222;
   padding: 3.5em 0 0.5em 0;
-  transition: all 0.05s ease-in-out;
+  transition: all 0.05s cubic-bezier(0.42, 0, 0.58, 1);
 }
 #navigation ul#topnav li.current {
   padding-bottom: calc(0.5em - 2px);
@@ -59,7 +62,6 @@ button img, button {
   color: #8896b1;
   background-color: #e6e6e6;
 }
-
 
 .container {
   position: fixed;
@@ -83,8 +85,8 @@ button img, button {
   width: 100%;
   height: 40vh;
 }
-.empty:firstchild {
-  height: 60vh;
+.empty.empty1 {
+  height: 60vh !important;
 }
 
 img {
@@ -169,7 +171,6 @@ img {
 .content .row {
   width: 100%;
   text-align: center;
-  padding-top: 2em;
 }
 .content .row .col {
   padding: 20px;
@@ -206,9 +207,9 @@ img {
   display: block;
   width: 100%;
   border: 2px solid #697B9D;
-  line-heigth: 1.3em;
+  line-height: 1.3em;
   font-size: 1em;
-  padding-top: 0.15em;
+  padding: 0.15em;
 }
 .frmctrl:hover {
   border: 2px solid #8896b1;
@@ -225,9 +226,6 @@ img {
 }
 
 @media only screen and (max-width: 1165px) {
-  p {
-    padding: 0 1em !important;
-  }
   .col.c3 {
     width: 100%;
     height: 40em;
@@ -238,52 +236,65 @@ img {
     width: 100%;
   }
   .col.c2.c22 {
-    height: 4em;
-    max-height: 4em;
+    height: 6em !important;
+    max-height: 5.5em !important;
   }
 
   #topnav {
-    transition: all 0.5s cubic-bezier(0.42,0,0.58,1);
-  }
-  #topnav.smallnav {
-    padding-top: 30vh;
-    text-align: center;
+    padding-top: 0;
+    height: 0;
+    width: 100vw;
+    padding-top: 0;
     position: fixed;
     left: 0;
     right: 0;
-    height: 100vh;
+    height: 0;
     width: 100vw;
     background-color: #697B9D;
     z-index: 300;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    not(.smallnav): li;
+    not(.smallnav)-height: 0;
+    not(.smallnav)-padding: 0;
+  }
+  #topnav.smallnav {
+    padding-top: 30vh;
+    height: 100vh;
+    opacity: 1;
   }
   #topnav.smallnav li {
     display: block;
+    opacity: 1 !important;
   }
-  #topnav li {
-    display: none;
-    transition: all 0.2s ease-in-out;
+  #topnav.smallnav li a {
+    padding: 60px 38vw 12px 38vw !important;
+    font-size: 3em !important;
+  }
+  #topnav.smallnav button {
+    transform: rotate(180deg);
+  }
+  #topnav li a {
+    font-size: 3em !important;
   }
   #topnav button {
     display: block;
     position: fixed;
     right: 30px;
-    top: 15px;
-    transition: all .5s cubic-bezier(0.45,-0.79, 0.57, 1.9);
+    top: 20px;
+    z-index: 301;
+    transition: all 0.5s cubic-bezier(0.45, -0.79, 0.57, 1.9);
   }
-  #topnav.smallnav button
-  {
-    transform: rotate(180deg);
-  }
-  li a {
-    padding: 60px 38vw 12px 38vw !important;
-    font-size: 3em;
-  }
+
   #navigation {
     height: 83px;
   }
+
   .btn {
     font-size: 1.3em !important;
+    padding-top: 13.5px !important;
   }
+
   .imgcontain:not(#center) {
     display: none;
   }
@@ -295,6 +306,11 @@ img {
 
   .content {
     width: 95%;
+  }
+
+  .frmctrl {
+    line-height: 1.3em;
+    font-size: 1.3em;
   }
 }
 @media only screen and (max-width: 100000px) and (min-width: 1166px) {
