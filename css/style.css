@@ -30,8 +30,6 @@ button img, button {
   width: 55px;
   height: 55px;
   background-color: transparent;
-  filter: invert(20%);
-  opacity: 1 !important;
 }
 
 #navigation {
@@ -261,18 +259,13 @@ img {
     z-index: 300;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
-    not(.smallnav): li;
-    not(.smallnav)-height: 0;
-    not(.smallnav)-padding: 0;
   }
   #topnav.smallnav {
     padding-top: 30vh;
     height: 100vh;
-    opacity: 1;
   }
   #topnav.smallnav li {
     display: block;
-    opacity: 1 !important;
   }
   #topnav.smallnav li a {
     padding: 60px 38vw 12px 38vw !important;
