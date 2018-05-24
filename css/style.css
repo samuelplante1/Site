@@ -294,8 +294,7 @@ img {
 
   .col.c3 {
     width: 100%;
-    height: 40em;
-    max-height: 40em;
+    max-height: 30em;
     padding: 0;
   }
   .col.c2 {
