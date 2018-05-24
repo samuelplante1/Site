@@ -192,6 +192,7 @@ img {
   font-stretch: 100%;
   margin: 1rem;
   transition: all 0.05s ease-in-out;
+  -webkit-appearance: none;
 }
 .btn:hover {
   transform: scale(1.03);
@@ -209,16 +210,6 @@ img {
 }
 .frmctrl:hover {
   border: 2px solid var(--main-lighter);
-}
-
-.footer {
-  height: 5em;
-  background-color: var(--main);
-  text-align: center;
-}
-.footer p {
-  padding-top: 30px !important;
-  color: #eee;
 }
 
 @media only screen and (max-width: 1165px) {
@@ -339,6 +330,16 @@ img {
     pointer-events: none;
     opacity: 0;
   }
+  .footer {
+    height: 20vh;
+    background-color: var(--main);
+    text-align: center;
+  }
+  .footer p {
+    padding-top: 9vh !important;
+    color: #eee;
+    font-size: 2.2em;
+  }
 }
 @media only screen and (max-width: 100000px) and (min-width: 1166px) {
   #topnav li {
@@ -370,5 +371,14 @@ img {
   .col.c2.c22 {
     height: 4em;
     max-height: 4em;
+  }
+  .footer {
+    height: 5em;
+    background-color: var(--main);
+    text-align: center;
+  }
+  .footer p {
+    padding-top: 30px !important;
+    color: #eee;
   }
 }
