@@ -7,12 +7,18 @@ $(document).ready(function(){
 });
 
 function smallnav() {
+  $(bouton).toggleClass('smallnav');
+  $(bouton).toggleClass('notsmallnav');
   $(topnav).toggleClass('smallnav');
+  $(topnav).toggleClass('notsmallnav');
 }
 $(document).ready(function() 
  {
     $('ul#topnav li').click(function() { 
-      document.getElementById("topnav").classList.remove("smallnav");
+      $(topnav).toggleClass('smallnav');
+      $(topnav).toggleClass('notsmallnav');
+      $(bouton).toggleClass('smallnav');
+      $(boutno).toggleClass('notsmallnav');
     });
  });
 

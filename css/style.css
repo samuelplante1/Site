@@ -30,7 +30,6 @@ button img, button {
   width: 55px;
   height: 55px;
   background-color: transparent;
-  z-index: 1401;
 }
 
 #navigation {
@@ -64,20 +63,13 @@ button img, button {
 
 .container {
   position: fixed;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
   z-index: -1;
-}
-.container img {
-  height: auto;
-  min-height: 66.7614646vw;
-  width: 100%;
-  min-width: 149.784007vh;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-  filter: blur(1px);
+  background-image: url(https://images.unsplash.com/photo-1493087670264-2f7f5844b402?ixlib=rb-0.3.5&s=1d948790e06c2489da1b933d13601670&auto=format&fit=crop&w=3898&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .empty {
@@ -225,70 +217,35 @@ img {
 }
 
 @media only screen and (max-width: 1165px) {
-  p {
-    padding: 0 1em !important;
-  }
-
-  .col.c3 {
-    width: 100%;
-    height: 40em;
-    max-height: 40em;
-    padding: 0;
-  }
-  .col.c2 {
-    max-height: 40em;
-    width: 100%;
-    padding: 0 !important;
-  }
-  .col.c2.c22 {
-    height: 6em !important;
-    max-height: 5.5em !important;
-    padding: 0;
-  }
-
-  #topnav {
-    padding-top: 0;
-    height: 0;
-    width: 100vw;
-    padding-top: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 0;
-    width: 100vw;
-    background-color: #697B9D;
-    z-index: 300;
-    
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-  }
-  #topnav.smallnav {
-    padding-top: 30vh;
-    height: 100vh;
-  }
-  #topnav.smallnav li {
-    display: block;
-  }
-  #topnav.smallnav li a {
-    padding: 60px 38vw 12px 38vw !important;
-    font-size: 3em !important;
-  }
-  #topnav.smallnav button {
-    transform: rotate(180deg);
-  }
-  #topnav li a {
-    font-size: 3em !important;
-  }
-  #topnav button {
+  button {
     display: block;
     position: fixed;
     right: 30px;
     top: 20px;
     z-index: 301;
-    -webkit-transform: translateZ(0);
-    transition: all 0.5s cubic-bezier(0.45, -0.79, 0.57, 1.9);
+    pointer-events: auto;
+  }
+  button.smallnav img {
+    animation: changeimageactive 0.4s ease-in-out forwards;
+  }
+  button.notsmallnav img {
+    animation: changeimageinactive 0.4s ease-in-out forwards;
   }
 
+  @keyFrames changeimageactive {
+    0%, 49.999% {
+      content: url(https://image.ibb.co/cL9wrT/1031511_512.png);
+    }
+    50%, 100% {
+      content: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-512.png);
+    }
+  }
+  @keyFrames changeimageinactive {
+    0%, 49.999% {
+      content: url(https://image.ibb.co/cL9wrT/1031511_512.png);
+    }
+    50%, 100%;
+  }
   #navigation {
     height: 83px;
   }
@@ -318,6 +275,59 @@ img {
 
   label {
     font-size: 2em;
+  }
+
+  p {
+    padding: 0 1em !important;
+  }
+
+  .col.c3 {
+    width: 100%;
+    height: 40em;
+    max-height: 40em;
+    padding: 0;
+  }
+  .col.c2 {
+    max-height: 40em;
+    width: 100%;
+    padding: 0 !important;
+  }
+  .col.c2.c22 {
+    height: 6em !important;
+    max-height: 5.5em !important;
+    padding: 0;
+  }
+
+  #topnav {
+    padding-top: 30vh !important;
+    height: 0;
+    width: 100vw;
+    padding-top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #697B9D;
+    z-index: 300;
+    overflow: hidden;
+    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out;
+  }
+  #topnav li {
+    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out !important;
+  }
+  #topnav li a {
+    padding: 60px 38vw 12px 38vw !important;
+    font-size: 3em !important;
+    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out;
+  }
+  #topnav.smallnav, #topnav.smallnav li, #topnav.smallnav li a {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #topnav.notsmallnav, #topnav.notsmallnav li, #topnav.notsmallnav li a {
+    pointer-events: none;
+    opacity: 0;
   }
 }
 @media only screen and (max-width: 100000px) and (min-width: 1166px) {
