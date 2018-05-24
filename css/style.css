@@ -334,7 +334,7 @@ img {
   #topnav li {
     display: inline-block;
   }
-  #topnav button {
+  button {
     display: none;
   }
 
