@@ -221,7 +221,7 @@ img {
     display: block;
     position: fixed;
     right: 30px;
-    top: 20px;
+    top: 14px;
     z-index: 301;
     pointer-events: auto;
   }
