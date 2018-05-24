@@ -18,7 +18,7 @@ $(document).ready(function()
       $(topnav).toggleClass('smallnav');
       $(topnav).toggleClass('notsmallnav');
       $(bouton).toggleClass('smallnav');
-      $(boutno).toggleClass('notsmallnav');
+      $(bouton).toggleClass('notsmallnav');
     });
  });
 

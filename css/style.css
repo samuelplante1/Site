@@ -226,10 +226,10 @@ img {
     pointer-events: auto;
   }
   button.smallnav img {
-    animation: changeimageactive 0.4s ease-in-out forwards;
+    animation: changeimageactive 0.3s ease-in-out forwards;
   }
   button.notsmallnav img {
-    animation: changeimageinactive 0.4s ease-in-out forwards;
+    animation: changeimageinactive 0.3s ease-in-out forwards;
   }
 
   @keyFrames changeimageactive {
@@ -319,15 +319,15 @@ img {
     background-color: #697B9D;
     z-index: 300;
     overflow: hidden;
-    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out;
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
   }
   #topnav li {
-    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out !important;
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out, all 0.05s cubic-bezier(0.42, 0, 0.58, 1) !important;
   }
   #topnav li a {
     padding: 60px 38vw 12px 38vw !important;
     font-size: 3em !important;
-    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out;
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
   }
   #topnav.smallnav, #topnav.smallnav li, #topnav.smallnav li a {
     opacity: 1;
