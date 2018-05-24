@@ -12,9 +12,9 @@ function smallnav() {
   $(topnav).toggleClass('smallnav');
   $(topnav).toggleClass('notsmallnav');
 }
-$(document).ready(function() 
+$(document).ready(function()
  {
-    $('ul#topnav li').click(function() { 
+    $('ul#topnav li').click(function() {
       $(topnav).toggleClass('smallnav');
       $(topnav).toggleClass('notsmallnav');
       $(bouton).toggleClass('smallnav');
@@ -260,8 +260,8 @@ $('a[href*="#"]')
   .click(function(event) {
     // On-page links
     if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
       location.hostname == this.hostname
     ) {
       // Figure out element to scroll to
