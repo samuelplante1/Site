@@ -66,7 +66,7 @@ button img, button {
   height: 100vh;
   width: 100vw;
   z-index: -1;
-  background-image: url(https://images.unsplash.com/photo-1493087670264-2f7f5844b402?ixlib=rb-0.3.5&s=1d948790e06c2489da1b933d13601670&auto=format&fit=crop&w=3898&q=80);
+  background-image: url(../img/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
