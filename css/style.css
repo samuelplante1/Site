@@ -234,10 +234,10 @@ img {
 
   @keyFrames changeimageactive {
     0%, 49.999% {
-      content: url(https://image.ibb.co/cL9wrT/1031511_512.png);
+      content: url(../img/ham.png);
     }
     50%, 100% {
-      content: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-512.png);
+      content: url(../img/X.png);
     }
     100% {
       transform: scale(-1);
@@ -248,10 +248,10 @@ img {
       transform: scale(-1);
     }
     0%, 49.999% {
-      content: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Close-512.png);
+      content: url(../img/X.png);
     }
     50%, 100% {
-      content: url(https://image.ibb.co/cL9wrT/1031511_512.png);
+      content: url(../img/ham.png);
     }
   }
   #navigation {
