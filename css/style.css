@@ -226,36 +226,30 @@ img {
     pointer-events: auto;
   }
   button.smallnav img {
-    animation: changeimageactive 0.3s ease-in-out forwards;
+    animation: changeimageactive 0.4s cubic-bezier(0.47, -0.74, 0.52, 1.66) forwards;
   }
   button.notsmallnav img {
-    animation: changeimageinactive 0.3s ease-in-out forwards;
+    animation: changeimageinactive 0.4s cubic-bezier(0.47, -0.74, 0.52, 1.66) forwards;
   }
 
   @keyFrames changeimageactive {
-    0%, 49.999% {
-      content: url(../img/ham.png);
-    }
-    50%, 100% {
-      content: url(../img/X.png);
+    0% {
+      transform: rotate(0deg);
+      filter: brightness(100%);
     }
     100% {
-      transform: scale(-1);
-      -webkit-filter: brightness(0%);
+      transform: rotate(180deg);
       filter: brightness(0%);
     }
   }
   @keyFrames changeimageinactive {
     0% {
-      transform: scale(-1);
-      -webkit-filter: brightness(0%);
+      transform: rotate(180deg);
       filter: brightness(0%);
     }
-    0%, 49.999% {
-      content: url(../img/X.png);
-    }
-    50%, 100% {
-      content: url(../img/ham.png);
+    100% {
+      transform: rotate(0deg);
+      filter: brightness(100%);
     }
   }
   #navigation {
@@ -323,15 +317,15 @@ img {
     background-color: #697B9D;
     z-index: 300;
     overflow: hidden;
-    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
+    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out;
   }
   #topnav li {
-    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out, all 0.05s cubic-bezier(0.42, 0, 0.58, 1) !important;
+    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out, all 0.05s cubic-bezier(0.42, 0, 0.58, 1) !important;
   }
   #topnav li a {
     padding: 60px 38vw 12px 38vw !important;
     font-size: 3em !important;
-    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
+    transition: visibility 0s linear 0.4s, opacity 0.4s ease-in-out;
   }
   #topnav.smallnav, #topnav.smallnav li, #topnav.smallnav li a {
     opacity: 1;
